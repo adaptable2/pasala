@@ -1,0 +1,30 @@
+extends ./layouts/app
+
+block title
+  title Detalle - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb='Catálogo de bonos')
+    .container 
+        .row.justify-content-center.pt-4
+          .col-md-10
+            a.back(href="special_awards.html") Volver
+        .row.justify-content-center.pt-3
+          .col-md-5.text-center
+            p.mb-2 Bono de Amazon por $50.000
+            .text Xxx personas están sumando cupones para ganarlo 
+        .row.justify-content-center
+          .col-md-3.text-center
+            a.button.button-yellow(href="") Seleccionar
+        .row.justify-content-center.pt-5
+          .col-md-5.d-flex.align-items-center.justify-content-center
+            img.w-100.img-golad(src="img/assets/iphone12Big.png", alt="")
+          .col-md-5
+            p.title-goald: strong Descripción
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue sed sagittis molestie tortor maecenas. Pellentesque duis nulla nisi, sit. Sit et bibendum metus ut semper aliquam. Eu suspendisse sed et nunc facilisis et aenean tellus risus.
+            p Mi posuere augue eget a in turpis odio accumsan. In cursus bibendum enim mi in scelerisque donec diam fringilla. Massa dictum enim mattis amet aliquet pulvinar posuere. Sed rutrum in ut justo, libero aliquet.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue sed sagittis molestie tortor maecenas. Pellentesque duis nulla nisi, sit. Sit et bibendum metus ut semper aliquam. Eu suspendisse sed et nunc facilisis et aenean tellus risus.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue sed sagittis molestie tortor maecenas. Pellentesque duis nulla nisi, sit. Sit et bibendum metus ut semper aliquam. Eu suspendisse sed et nunc facilisis et aenean tellus risus.
+  include partials/menu-float
+  include partials/footer

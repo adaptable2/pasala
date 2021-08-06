@@ -1,0 +1,102 @@
+extends ./layouts/app
+
+block title
+  title Redenciones - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb="Redención y acumulación")
+    .container 
+      .row.justify-content-center.pt-4
+        .col-md-5
+          .card.py-3.px-4.redemptions
+            .text-center
+              p.title: strong ¿Seguro que deseas redimir? 
+              p.m-0: strong *Mensaje de redención: * 
+              p: strong Para hacerlo es necesario que completes la siguiente información:
+              p: strong (variable, si aplica)
+            form(action="") 
+              .select.group
+                select#Department(name="redemptions")  
+                  option(hidden selected) Departamento 
+                  option option 1 
+                  option option 2
+                  option option 3
+                  option option 4
+                  option option 5
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .select.group
+                select#city(name="city")  
+                  option(hidden selected) Ciudad
+                  option option 1 
+                  option option 2
+                  option option 3
+                  option option 4
+                  option option 5
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .input.group 
+                input#address(type="text" pleceholder='Dirección')
+                label(for="address") Dirección
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .select.group
+                select#establishment(name="establishment")  
+                  option(hidden selected) Establecimiento
+                  option option 1 
+                  option option 2
+                  option option 3
+                  option option 4
+                  option option 5
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .select.group
+                select#document(name="document")  
+                  option(hidden selected) Tipo de documento
+                  option option 1 
+                  option option 2
+                  option option 3
+                  option option 4
+                  option option 5
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .input.group 
+                input#document(type="text" pleceholder='Documento')
+                label(for="document") Documento
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .input.group 
+                input#Name(type="text" pleceholder='Nombre')
+                label(for="Name") Nombre
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .input.group 
+                input#lastName(type="text" pleceholder='Apellido')
+                label(for="lastName") Apellido
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .input.group 
+                input#phone(type="tel" pleceholder='Celular')
+                label(for="phone") Celular
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .input.group 
+                input#email(type="email" pleceholder='Email')
+                label(for="email") Email
+                p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+              .group.buttons 
+                a.button.button-yellow(href="" data-toggle='modal' data-target='#success_bond') Redimir
+                a.button.button-outline(href="") Cancelar
+  #success_bond.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.text-center
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+          .border-image
+            img(src='img/icons/check.svg' alt='')
+          h2.title ¡Ya redimiste tu bono del catálogo!
+          p.mb-0 Disfrútalo con este código:  
+          p.title XXXXX
+          p 
+            strong Vigencia: 
+            | XX de xxxxxx de XXXX
+          a.button.button-white 
+            span.pdf Descargar PDF
+          p Aún puedes seguir acumulando cupones para participar por el premio especial que más te guste.
+          .row.justify-content-center
+            .col-8.col-md-6
+              a.button.button-yellow(href="calculating_login_values.html") Continuar participando
+  include partials/menu-float
+  include partials/footer

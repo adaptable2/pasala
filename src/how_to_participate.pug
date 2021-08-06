@@ -1,0 +1,59 @@
+extends ./layouts/app
+
+block title
+  title Cómo participar - Pásala Ganando / Bancolombia
+
+block content
+  include partials/header_brand
+  section.how_to_participate 
+    .container 
+      a.return(href='index.html') Inicio
+      .row 
+        .col-12
+          h1 Cómo participar
+        .col
+          .mechanical-carousel
+            div.px-3
+              .item
+                img.img-fluid(src='img/shapes/mechanics/1.svg')
+                .text
+                  p 
+                    span Gana con tus tarjetas 
+                  br
+                  p Disfruta tus compras con tus Tarjetas Maestro o Mastercard Bancolombia sean débito o crédito.
+            div.px-3
+              .item
+                img.img-fluid(src='img/shapes/mechanics/2.svg')
+                .text
+                  p 
+                    span Tendrás una meta 
+                  br
+                  p Para cumplirla deberás realizar compras en el número de grupos de comercios que te asignamos. Ten presente que cada grupo de comercio tiene una meta en pesos a alcanzar diferente.
+            div.px-3
+              .item
+                img.img-fluid(src='img/shapes/mechanics/3.svg')
+                .text
+                  p 
+                    span Cuando la cumplas, elige tu premio
+                  br
+                  p Durante la campaña solo podrás redimir una única vez 1 bono del catálogo (sin importar cuántas veces cumplas tu meta), o sumar cupones de forma ilimitada cada vez que la cumplas para participar por el premio especial que quieras. 
+                br
+                p
+                  span ¡Tú decides!
+            div.px-3
+              .item
+                img.img-fluid(src='img/shapes/mechanics/4.svg')
+                .text
+                  p 
+                    span Desafíate
+                  br
+                  p Además, podrás cumplir distintos retos y acumular cupones adicionales para participar por el premio especial que más te guste. 
+            div.px-3
+              .item
+                img.img-fluid(src='img/shapes/mechanics/5.svg')
+                .text
+                  p 
+                    span Más oportunidades 
+                  br
+                  p Y lo mejor es que si superaste tu meta en compras en alguno de los grupos de comercios, el valor se acumulará para que sea más fácil volver a cumplirla.
+  include partials/footer

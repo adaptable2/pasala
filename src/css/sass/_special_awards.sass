@@ -1,0 +1,38 @@
+.text-green
+  span
+    display: block
+    @media screen and ( min-width: 768px )
+      display: inline-block
+.card_awards
+  width: 100%
+  padding: 0 15px 15px
+  text-align: center
+  margin-bottom: 30px 
+  margin: 10px
+  .titles
+    line-height: 1em
+    min-height: 26px
+  &.active
+    background: $green
+    .buttons
+      > div:first-child
+        display: none
+  .img-height
+    align-items: center
+  img
+    margin-bottom: 10px
+  .buttons
+    display: flex
+    align-items: center
+    justify-content: space-around
+    .more
+      white-space: nowrap
+      margin: 0 auto
+      background: red
+      background: url(../img/icons/more.svg) no-repeat center center / contain
+      &.check
+        background: red
+        background: url(../img/icons/check.svg) no-repeat center center / contain
+  @media screen and ( min-width: 768px )
+    padding: 0px 15px 15px
+    margin-bottom: 0px

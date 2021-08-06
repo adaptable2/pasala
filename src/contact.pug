@@ -1,0 +1,63 @@
+extends ./layouts/app
+
+block title
+  title Contacto - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb='Contáctanos')
+    .container 
+        .row.justify-content-center
+          .col-12.text-center.pt-4
+            p: strong ¿Tienes peticiones, quejas o reclamos?
+          .col-md-6.text-center
+            .contact-img.mt-4.mb-5
+              img.w-100(src="img/assets/contacto.png", alt="")
+              img(src="img/shapes/shape-1.svg", alt="").figure
+          .col-12.text-center.pb-4
+            p: strong Queremos resolver tus dudas:
+          .col-md-5#accordionContact
+            .card.card-contact
+              .icon
+                img.mb-3(src="img/icons/puntosColombia.svg", alt="")
+              p.mb-2 Si tienes problemas con Puntos Colombia o con un bono de Tu boleta, comunícate al 
+                a(href=""): strong (57) X XXXXXXXXX 
+                | para aclararlas.
+            .card.card-contact
+              .icon
+                img.mb-3(src="img/icons/envio.svg", alt="")
+              #headingTwo.headerAcordion.py-0.pr-5.text-left.collapsed(data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                p.m-0 Si algo salió mal con el ingreso a la plataforma o tus transacciones, comunícate en la sucursal telefónica de Bancolombia a:
+              #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionContact')
+                .card-body.pb-0
+                  ul 
+                    li Bogotá: 
+                      a(href=""): strong 343 0000 
+                    li Medellín: 
+                      a(href=""): strong 510 9000
+                    li Cali: 
+                      a(href=""): strong 554 0505
+                    li Barranquilla: 
+                      a(href=""): strong 361 8888
+                    li Cartagena: 
+                      a(href=""): strong 693 4400
+                    li Bucaramanga: 
+                      a(href=""): strong 697 2525
+                    li Resto del país: 
+                      a(href=""): strong 01 8000 09 12345
+            .card.card-contact
+              .icon
+                img.mb-3(src="img/icons/message.svg", alt="")
+              #headingOne.headerAcordion.py-0.pr-5.text-left(data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                p.m-0 O si presentas algún inconveniente con los bonos del catálogo y necesitas soporte o ampliar alguna información, contáctanos a:
+              #collapseOne.collapse.show(aria-labelledby='headingOne' data-parent='#accordionContact')
+                .card-body.pb-0
+                  ul 
+                    li 
+                      a(href=""): strong soporte@quantamrewards.co
+                    li Línea nacional gratuita: 
+                      a(href=""): strong 01 8000 113104
+                    li WhatsApp: 
+                      a(href=""): strong 322 782 85 32
+  include partials/menu-float
+  include partials/footer

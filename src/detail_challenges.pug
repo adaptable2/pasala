@@ -1,0 +1,27 @@
+extends ./layouts/app
+
+block title
+  title Reto - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb="Retos")
+    .container 
+        .row.justify-content-center
+          .col-md-6
+            a.back(href="challenges.html") Volver
+        .row.justify-content-center.pt-4
+          .col-md-5.text-center
+            p.title-detail Reto: dinos quién eres
+            img.w-100(src="img/assets/detail.png", alt="")
+        .row.justify-content-center.pt-4
+          .col-md-7.text-center
+            p 
+              strong ¡Conocerte nos ayudará a ofrecerte mejores beneficios! 
+            p Actualiza tu información personal en la Sucursal Virtual Personas de Bancolombia 
+              strong y recibe 200 cupones. 
+        .row.justify-content-center
+          .col-md-3.text-center
+            a.button.button-yellow(href="") Hazlo aquí
+  include partials/menu-float
+  include partials/footer

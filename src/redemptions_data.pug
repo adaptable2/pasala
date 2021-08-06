@@ -1,0 +1,76 @@
+extends ./layouts/app
+
+block title
+  title Redenciones - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb="Redención y acumulación")
+    .container 
+      .row.justify-content-center.pt-4.redemptions
+        .col-8.text-center
+          p: strong ¡Aquí siempre tendrás la información para disfrutar tu premio!
+      .row.justify-content-center.pt-4.redemptions
+        .col-md-5.d-flex
+          .card.mb-3.p-4
+            p.title-line: strong Redención de bono
+            .card-color.bg-blue 
+              .row.m-0
+                .col-6.p-0.d-flex.align-items-center
+                  .img-radius
+                    img.w-100(src="img/assets/bond.png", alt="")
+                .col-6.pr-0.d-flex.justify-content-center.flex-column
+                  p 
+                    span.title Nombre
+                    | Bono de Amazon por $50.000
+                  p 
+                    span.title Fecha
+                    | XX de XXXXXX de XXXX
+                  p
+                    span.title Código
+                    | XXXXXXXXXX
+                .col-md-12.p-0
+                  a.button.button-white.py-0(href="") 
+                    span.py-1.pdf Descargar PDF
+        .col-md-5
+          .card.mb-3.p-4.table-card
+            p.title-line: strong Acumulación de cupones
+            .row.m-0
+              .col-3.px-1.d-flex.align-items-center.justify-content-center
+                p: strong Cantidad de cupones
+              .col-4.px-1.d-flex.align-items-center.justify-content-center
+                p: strong Método 
+                  br 
+                  | de redención
+              .col-5.px-1.d-flex.align-items-center.justify-content-center
+                p: strong Fecha
+            .row.m-0
+              .col-3.px-1.d-flex.align-items-center.justify-content-center
+                p 100
+              .col-4.px-1.d-flex.align-items-center.justify-content-center
+                p [Cumplimiento meta - Reto nombre]
+              .col-5.px-1.d-flex.align-items-center.justify-content-center
+                p XX de XXXXXX de XXXX
+            .row.m-0
+              .col-3.px-1.d-flex.align-items-center.justify-content-center
+                p 100
+              .col-4.px-1.d-flex.align-items-center.justify-content-center
+                p [Cumplimiento meta - Reto nombre]
+              .col-5.px-1.d-flex.align-items-center.justify-content-center
+                p XX de XXXXXX de XXXX
+            .row.m-0
+              .col-3.px-1.d-flex.align-items-center.justify-content-center
+                p 100
+              .col-4.px-1.d-flex.align-items-center.justify-content-center
+                p [Cumplimiento meta - Reto nombre]
+              .col-5.px-1.d-flex.align-items-center.justify-content-center
+                p XX de XXXXXX de XXXX
+            .row.m-0
+              .col-3.px-1.d-flex.align-items-center.justify-content-center
+                p 100
+              .col-4.px-1.d-flex.align-items-center.justify-content-center
+                p [Cumplimiento meta - Reto nombre]
+              .col-5.px-1.d-flex.align-items-center.justify-content-center
+                p XX de XXXXXX de XXXX
+  include partials/menu-float
+  include partials/footer

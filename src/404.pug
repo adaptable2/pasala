@@ -1,0 +1,21 @@
+extends ./layouts/app
+
+block title
+  title Error 404 - Pásala Ganando / Bancolombia
+
+block content
+  include partials/header_brand
+  section.calculating-goal
+    .container 
+      .row.justify-content-center.pb-5
+        .col-md-6
+          a.back(href="#") Volver
+      .row.justify-content-center
+        .col-md-6.text-center
+          p.pb-4: strong ¡Lo sentimos la página no ha sido encontrada!
+      .row.justify-content-center
+        .col-md-6
+          .loading-goal
+            img.img-fluid(src='img/icons/404.svg')
+            h3.pt-4 Revisa que estés digitando correctamente la información.
+  include partials/footer

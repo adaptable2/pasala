@@ -1,0 +1,63 @@
+section.how_to_participate 
+  min-height: calc( 100vh - 167px )
+  display: flex
+  @media screen and ( min-width: 1366px )
+    align-items: center
+    padding-top: 67px
+    min-height: calc( 100vh - 278px )
+  h1
+    font-size: 2.0em
+    text-align: center
+  .mechanical-carousel
+    margin: 0 20px
+    .item
+      text-align: center
+      padding: 30px
+      box-shadow: 0px 0px 10px rgba(172, 172, 172, 0.5)
+      margin: 15px
+      @media (max-width: 767.98px)
+        margin: 15px 0
+        padding: 15px
+      img
+        margin: 0 auto 30px auto
+        height: 130px
+      .text
+        min-height: 201px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        p
+          margin: 0
+    .arrow-carousel
+      position: absolute
+      top: 50%
+      width: 50px
+      height: 50px
+      background-image: url(../img/icons/carousel-arrow.svg)
+      cursor: pointer
+      border-radius: 50%
+      &-right
+        right: -50px
+        transform: rotate(180deg)
+        @media (max-width: 767.98px)
+          right: -30px
+      &-left
+        left: -50px
+        @media (max-width: 767.98px)
+          left: -30px
+    .slick
+      &-dots
+        button
+          &:before
+            font-size: 10px
+            opacity: 1
+            color: $lightgray
+      &-active
+        button
+          &:before
+            font-size: 14px
+            opacity: 1
+            color: $blue
+  @media (max-width: 767.98px)
+    padding-top: 30px

@@ -1,0 +1,86 @@
+.here
+  color: $black
+  display: inline-block
+  padding: 10px 10px 10px 0
+  position: relative
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    width: 10px
+    height: 10px
+    right: 0
+    top: 50%
+    border-top: solid 2px $black
+    border-right: solid 2px $black
+    transform: rotate(45deg) translateY(-50%)
+  &:hover
+    color: $black
+    text-decoration: none
+.title-detail
+  font-size: 2em
+.back
+  font-size: 1.3em
+  color: $black
+  padding: 10px
+  background: url(../img/icons/arrow-back.svg) no-repeat left center / 20px
+  padding-left: 30px 
+  font-weight: 700
+  &:hover
+    color: $black
+    text-decoration: none
+
+.challeng
+  padding: 20px 10px
+  margin: 15px 0
+  .number
+    font-size: 2em
+  &:nth-child(6n+1)
+    background: $purple
+  &:nth-child(6n+2)
+    background: $lightBlue
+  &:nth-child(6n+3)
+    background: $pink
+  &:nth-child(6n+4)
+    background: $yellow
+  &:nth-child(6n+5)
+    background: $orange
+  &:nth-child(6n+6)
+    background: $green
+  &.active
+    background-color: $lightgray
+    .number
+      padding-top: 30px
+      background: url(../img/icons/check.svg) no-repeat top center 
+      &::before
+        content: "Sumaste"
+        text-align: center
+        display: block
+        font-family: $CIBFontSans700
+    img
+      filter: grayscale(1)
+    .complete
+      background: $green
+      color: $white
+    .button-white
+      display: none
+    .paragraph
+      display: none
+  &:nth-child(even)
+    .title-content
+      order: 0
+    .img
+      order: 2
+    .text
+      order: 1
+    .complete-content
+      order: 3
+  .title
+    font-size: 2em
+.complete
+  padding: 5px 10px
+  background: $grayMedium
+  border-radius: 200px
+  color: $gray
+  text-align: center
+  margin: 0

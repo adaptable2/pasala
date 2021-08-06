@@ -1,0 +1,115 @@
+extends ./layouts/app
+
+block title
+  title Inicio - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login
+    .container 
+        .row.justify-content-center
+          .col-md-8
+            .text-content 
+              .text 
+                p: strong Tu meta es hacer compras para activar:
+                p.number 
+                  span.num 5 
+                  span grupos de
+                    br
+                    | comercios
+              p.text-center.m-0 Llevas 
+                span 1 
+                | de 5
+              .icons
+                .icon.active
+                  img(src="img/icons/goals/mercado-y-tiendas-por-departamento.svg", alt="")
+            .text-center
+              img.mr-2(src="img/icons/updated.svg", alt="") 
+              p.d-inline-block Última actualización de tus transacciones 15/jun/2021
+        .row.justify-content-center
+            .col-md-5
+              .goal_percentage
+                .icon 
+                  img(src="img/icons/goals/full.svg", alt="")
+                .percentage.border
+                  p: strong(data-toggle='modal' data-target='#modal-categories') Mercado y tiendas por departamento
+                  .amount(style='width:100%')
+                  .more(data-toggle='modal' data-target='#code-modal')
+              .goal_percentage
+                .icon 
+                  img(src="img/icons/goals/seguros-y-viajes.svg", alt="")
+                .percentage.border 
+                  p: strong(data-toggle='modal' data-target='#modal-categories') Seguros y viajes
+                  .amount(style='width:10%')
+                  .more(data-toggle='modal' data-target='#code-modal')
+              .goal_percentage
+                .icon 
+                  img(src="img/icons/goals/restaurantes-y-entretenimiento.svg", alt="")
+                .percentage.border 
+                  p: strong(data-toggle='modal' data-target='#modal-categories') Restaurantes y entretenimiento
+                  .amount(style='width:50%')
+                  .more(data-toggle='modal' data-target='#code-modal')
+            .col-md-5
+              .goal_percentage
+                .icon 
+                  img(src="img/icons/goals/salud-educacion-y-vestuario.svg", alt="")
+                .percentage.border 
+                  p: strong(data-toggle='modal' data-target='#modal-categories') Salud, educación y vestuario
+                  .amount(style='width:70%')
+                  .more(data-toggle='modal' data-target='#code-modal')
+              .goal_percentage
+                .icon 
+                  img(src="img/icons/goals/tecnologia-y-transporte.svg", alt="")
+                .percentage 
+                  p: strong(data-toggle='modal' data-target='#modal-categories') Tecnología y transporte
+                  .amount(style='width:0%')
+                  .more(data-toggle='modal' data-target='#code-modal')
+              .goal_percentage
+                .icon 
+                  img(src="img/icons/goals/otros.svg", alt="")
+                .percentage
+                  p: strong(data-toggle='modal' data-target='#modal-categories') Otros
+                  .amount(style='width:0%')
+                  .more(data-toggle='modal' data-target='#code-modal')
+        .row.justify-content-center
+          .col-md-7 
+            .row.importanInfo.active
+              .icon-bell
+              .col-6.img-destacada.pr-0
+                img.d-block.d-md-none.w-100(src="img/assets/asset-profile-m.png", alt="")
+                img.d-none.d-md-block.w-100(src="img/assets/asset-profile.png", alt="")
+                img.figure(src="img/shapes/shape-2.svg", alt="")
+              .col-6.d-flex.flex-wrap.justify-content-center.flex-column.bg-lightBlue.align-items-start.py-3
+                p.m-0 Si te gusta desafiarte, cumple retos, acumula cupones y gana.
+                a.arrow(href="challenges.html") Ver retos
+    #code-modal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+      .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+          .modal-body.text-center
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+            img.icon(src="img/shapes/padlock.svg", alt="")
+            h5.modal-title Descubre tu información personal    
+            p.my-3 Para hacerlo y porque nos importa tu seguridad, es necesario que ingreses los últimos 4 dígitos de cualquiera de tus Tarjetas Maestro o Mastercard Bancolombia sean débito o crédito.   
+            .capcha.d-flex.justify-content-center
+              img.w-75(src='img/assets/capcha.png')
+            .py-3.form-code
+              input.codeInput(type="tel" maxlength="1")
+              input.codeInput(type="tel" maxlength="1")
+              input.codeInput(type="tel" maxlength="1")
+              input.codeInput(type="tel" maxlength="1")
+            p.error Si cambiaste recientemente tu tarjeta, ingresa con los últimos 4 dígitos de la anterior o espera 15 días mientras actualizamos tus datos.
+            a.button.button-yellow(href='calculating_login_values.html') Continuar
+  #modal-categories.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.text-center
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+          .border-image
+            img(src='img/icons/goals/mercado-y-tiendas-por-departamento.svg' alt='')
+          h2 Mercado y tiendas por departamento
+          p.text No importa si en tu casa mercas semanal o quincenal, si todas tus compras en almacenes de cadena, supermercados o minimercados las haces con tus tarjetas, suman para cumplir con este grupo de comercio.
+          p.text
+            span Cada que vas a mercar, es una oportunidad de ganar
+          a.button.button-yellow( data-dismiss="modal" aria-label="Close") Cerrar
+  include partials/menu-float
+  include partials/footer

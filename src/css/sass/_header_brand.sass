@@ -1,0 +1,41 @@
+section.header-brand
+	padding-top: 15px
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	background-color: $white
+	z-index: 8
+	&-menu
+		box-shadow: 0px 0px 10px rgba(172, 172, 172, 0.5)
+	img
+		max-width: 240px
+		margin-bottom: 18px
+	hr
+		border-top: 1px solid rgba($gray, 0.7)
+		margin-top: 0
+	h2
+		font-size: 2.0em
+		font-family: $CIBFontSans
+		margin: 0
+		span
+			font-family: $CIBFontSans700
+	@media (max-width: 767.98px)
+		img
+			width: 310px
+		hr
+			display: none
+a.logout
+	display: inline-block
+	font-family: $Roboto
+	font-size: 1.0em
+	color: $black
+	transition: all ease 0.5s
+	img
+		width: 16px
+		margin: 0 0 0 5px
+		transition: all ease 0.5s
+	&:hover
+		text-decoration: none
+		img
+			transform: translateX(5px)

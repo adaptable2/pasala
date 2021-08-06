@@ -1,0 +1,27 @@
+extends ./layouts/app
+
+block title
+  title Calculando Meta - Pásala Ganando / Bancolombia
+
+block content
+  include partials/header_brand
+  section.calculating-goal
+    .container 
+      .row.justify-content-center
+        .col-md-8
+          .loading-goal
+            h1 Hola&nbsp;
+              br
+              span Nombre Apellido
+            h4 Estamos calculando tu meta personal
+            .animation-calculating
+              .circle.circle1
+              .circle.circle2
+              .circle.circle3
+              .hand.animation
+            h3 Lo hacemos de acuerdo con los gastos que realizas día a día.
+  include partials/footer
+  script(type='text/javascript').
+    setTimeout(function() {
+    window.location.href = "calculating_goal_diagram.html";
+    }, 5000);

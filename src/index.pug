@@ -1,0 +1,31 @@
+extends ./layouts/app
+
+block title
+  title Pásala Ganando / Bancolombia Mastercard
+
+block content
+  include partials/header_brand
+  section.home 
+    .container
+      .row.justify-content-center
+        .col-md-7
+          .shapes
+            img.img-fluid(src='img/assets/asset-login.png')
+        .col-md-4
+          h1 Pásala Ganando
+          p con tus Tarjetas Maestro o Mastercard Bancolombia, sean débito o crédito. 
+            span ¡Ya estás participando!
+          .login-form
+            .group
+              input(type='number', required, onkeypress='return (event.charCode >= 1 && event.charCode <= 57)')
+              span.bar
+              label Ingresa tu cédula
+              p.error Error error error error
+            .capcha.d-flex.justify-content-center
+              img.w-75(src='img/assets/capcha.png')
+            .terms
+              input#TermsAndConditions(type='checkbox', name='TermsAndConditions', value='true')
+              label#label-1.checkbox-label(for='TermsAndConditions', onclick='TermsOnClick();')
+              label.text(for='TermsAndConditions') Acepto términos y condiciones
+            a.button.button-yellow(href='calculating_goal.html') Entrar
+  include partials/footer

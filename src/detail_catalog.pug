@@ -1,0 +1,35 @@
+extends ./layouts/app
+
+block title
+  title Detalle - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb="Catálogo de bonos")
+    .container 
+        .row.justify-content-center.pt-4
+          .col-md-6
+            a.back(href="catalogue_bonds.html") Volver
+        .row.justify-content-center.pt-4
+          .col-md-5.text-center
+            p.mb-2 Bono de Amazon por $50.000
+            .text.pb-4 XXX unidades disponibles 
+            img.imgDetail(src="img/assets/brand.png", alt="")
+        .row.justify-content-center.pt-4
+          .col-md-5
+            #accordion
+              #headingOne.headerAcordion(data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                p.m-0 Términos y condiciones
+              #collapseOne.collapse.show(aria-labelledby='headingOne' data-parent='#accordion')
+                .card-body
+                  | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+              #headingTwo.headerAcordion.collapsed(data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                p.m-0 Descripción
+              #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordion')
+                .card-body
+                  | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+        .row.justify-content-center.pt-4
+          .col-md-3
+            a.button.button-yellow(href="redemptions.html") Redimir
+  include partials/menu-float
+  include partials/footer

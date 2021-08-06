@@ -1,0 +1,104 @@
+extends ./layouts/app
+
+block title
+  title Inicio - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login
+    .container 
+        .row.justify-content-center
+          .col-md-8
+            .text-content#step3
+              .text 
+                p: strong Tu meta es hacer compras para activar:
+                p.number 
+                  span.num 5 
+                  span grupos de
+                    br
+                    | comercios
+              p.text-center.m-0 Llevas 
+                span 1 
+                | de 5
+              .icons
+                .icon.active
+                    img(src="img/icons/goals/mercado-y-tiendas-por-departamento.svg", alt="")
+            .text-center
+              img.mr-2(src="img/icons/updated.svg", alt="") 
+              p.d-inline-block Última actualización de tus transacciones 15/jun/2021
+        .row.justify-content-center.pb-5#step1
+          .col-md-5
+            .goal_percentage#step2(data-toggle='modal' data-target='#modal-categories')
+              .icon 
+                  img(src="img/icons/goals/full.svg", alt="")
+              .percentage.border
+                p.col-6.pl-0: strong Mercado y tiendas por departamento
+                p.col-3.pl-0: strong Llevas: $XX.XXX
+                p.col-3.pl-0: strong Te falta: $XX.XXX
+                .amount(style='width:70%')
+            .goal_percentage(data-toggle='modal' data-target='#modal-categories')
+              .icon 
+                img(src="img/icons/goals/seguros-y-viajes.svg", alt="")
+              .percentage.border 
+                p.col-6.pl-0: strong Seguros y viajes
+                p.col-3.pl-0: strong Llevas: $XX.XXX
+                p.col-3.pl-0: strong Te falta: $XX.XXX
+                .amount(style='width:50%')
+            .goal_percentage(data-toggle='modal' data-target='#modal-categories')
+              .icon 
+                img(src="img/icons/goals/restaurantes-y-entretenimiento.svg", alt="")
+              .percentage.border 
+                p.col-6.pl-0: strong Restaurantes y entretenimiento
+                p.col-3.pl-0: strong Llevas: $XX.XXX
+                p.col-3.pl-0: strong Te falta: $XX.XXX
+                .amount(style='width:0%')
+          .col-md-5
+            .goal_percentage(data-toggle='modal' data-target='#modal-categories')
+              .icon 
+                img(src="img/icons/goals/salud-educacion-y-vestuario.svg", alt="")
+              .percentage.border 
+                p.col-6.pl-0: strong Salud, educación y vestuario
+                p.col-3.pl-0: strong Llevas: $XX.XXX
+                p.col-3.pl-0: strong Te falta: $XX.XXX
+                .amount(style='width:0%')
+            .goal_percentage(data-toggle='modal' data-target='#modal-categories')
+              .icon 
+                img(src="img/icons/goals/tecnologia-y-transporte.svg", alt="")
+              .percentage 
+                p.col-6.pl-0: strong Tecnología y transporte
+                p.col-3.pl-0: strong Llevas: $XX.XXX
+                p.col-3.pl-0: strong Te falta: $XX.XXX
+                .amount(style='width:0%')
+            .goal_percentage(data-toggle='modal' data-target='#modal-categories')
+              .icon 
+                img(src="img/icons/goals/otros.svg", alt="")
+              .percentage
+                p.col-6.pl-0: strong Otro
+                p.col-3.pl-0: strong Llevas: $XX.XXX
+                p.col-3.pl-0: strong Te falta: $XX.XXX
+                .amount(style='width:0%')
+        .row.justify-content-center
+          .col-md-7#step4
+            .row.importanInfo.active
+              .icon-bell
+              .col-6.img-destacada.pr-0
+                img.d-block.d-md-none.w-100(src="img/assets/asset-profile-m.png", alt="")
+                img.d-none.d-md-block.w-100(src="img/assets/asset-profile.png", alt="")
+                img.figure(src="img/shapes/shape-2.svg", alt="")
+              .col-6.d-flex.flex-wrap.justify-content-center.flex-column.bg-lightBlue.align-items-start.py-3
+                p.m-0 Si te gusta desafiarte, cumple retos, acumula cupones y gana.
+                a.arrow(href="challenges.html") Ver retos
+    #modal-categories.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-body.text-center
+            button.close(type="button" data-dismiss="modal" aria-label="Close")
+            .border-image
+              img(src='img/icons/goals/mercado-y-tiendas-por-departamento.svg' alt='')
+            h2 Mercado y tiendas por departamento
+            p.text No importa si en tu casa mercas semanal o quincenal, si todas tus compras en almacenes de cadena, supermercados o minimercados las haces con tus tarjetas, suman para cumplir con este grupo de comercio.
+            p.text
+              span Cada que vas a mercar, es una oportunidad de ganar
+            a.button.button-yellow(data-dismiss='modal') Cerrar
+  include partials/menu-float
+  include partials/footer

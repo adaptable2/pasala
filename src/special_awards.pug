@@ -1,0 +1,115 @@
+extends ./layouts/app
+
+block title
+  title Premios especiales - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb='Premios especiales')
+    .container 
+        .row.justify-content-center
+          .col-12.text-center.pt-4
+            p: strong ¡Para ti que le apuestas a lo grande!
+            p: strong Selecciona el premio especial por el que quieras participar y acumula todos los cupones que puedas para ganártelo.
+            p Las personas que más cupones acumulen en cada premio se lo llevarán. Los ganadores serán publicados una vez finalizada la campaña.
+        .row.justify-content-center.d-none.text-green
+          .col-md-8.d-flex.pb-3
+            .w-100.p-4.p-md-3.bg-green.text-center
+              p.m-0
+                strong Actualmente estas participando por: 
+                  span COMBO 1 - TU ESPACIO SOÑADO
+        .row.justify-content-center
+          .col-md-3.d-flex
+            a.d-none.button.button-outline.removeSelection(data-toggle='modal' data-target='#liquidated') Cambiar selección
+        .row.justify-content-center.py-md-4.py-2
+          .col-md-10
+            .pecial_awards
+              .card.card_awards
+                .row.img-height
+                  img.w-100(src="img/assets/samsung.png", alt="")
+                p.titles: strong Samsung
+                p.text XX personas están sumando cupones para ganarlo
+                .buttons
+                  div
+                    .check.more 
+                    p Seleccionar
+                  div
+                    a(href="detail_goald.html").more 
+                    p Ver más
+              .card.card_awards
+                .row.img-height
+                  img.w-100(src="img/assets/appleTv.png", alt="")
+                p.titles: strong Apple Tv
+                p.text XX personas están sumando cupones para ganarlo
+                .buttons
+                  div
+                    .check.more 
+                    p Seleccionar
+                  div
+                    a(href="detail_goald.html").more 
+                    p Ver más
+              .card.card_awards
+                .row.img-height
+                  img.w-100(src="img/assets/Iphone12.png", alt="")
+                p.titles: strong Iphone 12
+                p.text XX personas están sumando cupones para ganarlo
+                .buttons
+                  div
+                    .check.more 
+                    p Seleccionar
+                  div
+                    a(href="detail_goald.html").more 
+                    p Ver más
+              .card.card_awards
+                .row.img-height
+                  img.w-100(src="img/assets/alexa.png", alt="")
+                p.titles: strong Alexa
+                p.text XX personas están sumando cupones para ganarlo
+                .buttons
+                  div
+                    .check.more 
+                    p Seleccionar
+                  div
+                    a(href="detail_goald.html").more 
+                    p Ver más
+              .card.card_awards
+                .row.img-height
+                  img.w-100(src="img/assets/special_award.png", alt="")
+                p.titles: strong Samsung
+                p.text XX personas están sumando cupones para ganarlo
+                .buttons
+                  div
+                    .check.more 
+                    p Seleccionar
+                  div
+                    a(href="detail_goald.html").more 
+                    p Ver más
+              .card.card_awards
+                .row.img-height
+                  img.w-100(src="img/assets/cocina.png", alt="")
+                p.titles: strong Cocina sin complicaciones
+                p.text XX personas están sumando cupones para ganarlo
+                .buttons
+                  div
+                    .check.more 
+                    p Seleccionar
+                  div
+                    a(href="detail_goald.html").more 
+                    p Ver más        
+        .row.justify-content-center
+          .col-12.text-center
+            p: strong *Podrás cambiar el premio por el que estás participando hasta el [dd/mes/año].
+            p Ten presente que solo podrás hacer este cambio una vez al día.   
+  #liquidated.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.text-center
+          .border-image.mb-2
+            img(src='img/icons/alertPhone.svg' alt='')
+          h2.title.pb-3 ¡UPS!
+          p Ten presente que solo podrás hacer este cambio una vez al día.   
+          .row.justify-content-center
+            .col-8.col-md-6
+              a.button.button-outline(role="button" data-dismiss="modal" aria-label="Close") Cerrar
+  include partials/menu-float
+  include partials/footer

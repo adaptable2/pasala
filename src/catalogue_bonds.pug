@@ -1,0 +1,119 @@
+extends ./layouts/app
+
+block title
+  title Catálogos - Pásala Ganando / Bancolombia
+
+block content
+  include partials/menu
+  section.calculating_login(data-crumb='Catálogo de bonos')
+    .container 
+        .row.justify-content-center
+          .col-md-6.pt-5.pb-4
+            p.text-center: strong Esta es la recompensa por cumplir tu meta
+            .orange-message.py-4
+              p: strong Tienes dos opciones para disfrutar:
+              ul
+                li.bold
+                  span 1. 
+                  | Redimir un bono del catálogo.
+                li.bold
+                  span 2. 
+                  | Acumular cupones para participar por un premio especial al final de la campaña.
+              p.m-0 Tú decides cuál de las dos elegir.  
+          .col-md-12
+            .row.justify-content-center
+              .col-md-3.d-flex
+                .cardBonds#step6
+                  .img
+                    img(src="img/assets/bond.png", alt="")
+                  .content-text
+                    p.title: srtong Bono de Amazon holi, este texto es big por $50.000
+                    p.text XXX unidades disponibles 
+                    a(href="detail_catalog.html").more 
+              .col-md-3.d-flex
+                .cardBonds
+                  .img
+                    img(src="img/assets/bond.png", alt="")
+                  .content-text
+                    p.title: srtong Bono de Amazon por $50.000
+                    p.text XXX unidades disponibles 
+                    a(href="detail_catalog.html").more 
+              .col-md-3.d-flex
+                .cardBonds
+                  .img
+                    img(src="img/assets/bond.png", alt="")
+                  .content-text
+                    p.title: srtong Bono de Amazon por $50.000
+                    p.text XXX unidades disponibles XXX unidades disponibles 
+                    a(href="detail_catalog.html").more 
+              .col-md-3.d-flex
+                .cardBonds
+                  .img
+                    img(src="img/assets/bond.png", alt="")
+                  .content-text
+                    p.title: srtong Bono de Amazon por $50.000
+                    p.text XXX unidades disponibles 
+                    a(href="detail_catalog.html").more 
+              .col-md-3.d-flex
+                .cardBonds
+                  .img
+                    img(src="img/assets/bond.png", alt="")
+                  .content-text
+                    p.title: srtong Bono de Amazon por $50.000
+                    p.text XXX unidades disponibles 
+                    a(href="detail_catalog.html").more 
+              .col-md-3.d-flex
+                .cardBonds
+                  .img
+                    img(src="img/assets/bond.png", alt="")
+                  .content-text
+                    p.title: srtong Bono de Amazon por $50.000
+                    p.text XXX unidades disponibles 
+                    a(href="detail_catalog.html").more 
+      
+          .col-md-12
+            .row.importanInfo
+              .col-md-5.img-destacada.pr-0.pl-0.pl-md-3
+                img.w-100(src="img/assets/catalogue_bonds.png", alt="")
+                img.figure.carousels(src="img/shapes/shape-1.svg", alt="")
+              .col-md-7.d-flex.flex-wrap.justify-content-center.flex-column.align-items-start.py-3.text-center.bg-purple.px-md-5
+                p.m-0 Redime 100 cupones para participar por el premio especial que quieres al final de la campaña.
+                a.button.button-white.mb-3(href="" data-toggle='modal' data-target='#to-assure') Redimir 100 cupones
+                p.m-0.fs-10 Ten presente que durante la campaña solo podrás seleccionar un bono o tendrás la opción de redimir cupones cada vez que cumplas tu meta.
+
+  #to-assure.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.text-center.py-4
+          h2.title.pb-4 ¿Seguro que deseas redimir? 
+          p.text Al hacerlo acumularás cupones para participar al final de la campaña, por el premio especial que más te guste. ¡Elígelo!
+          .row.justify-content-center
+            .col-8.col-md-6
+              a.button.button-yellow(href="" data-dismiss="modal" data-toggle="modal" data-target="#success_coupon") Redimir
+              a.button.button-outline(href="" data-dismiss="modal" aria-label="Close") Cancelar
+  #success_coupon.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.text-center
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+          .border-image
+            img(src='img/icons/check.svg' alt='')
+          h2.title.pb-4 ¡Redimiste con éxito 100 cupones!
+          p.mb-0 Hasta la fecha llevas acumulados
+          p.title XXX cupones
+          .row.justify-content-center
+            .col-8.col-md-6
+              a.button.button-yellow(data-dismiss="modal" aria-label="Close") Continuar participando
+  #alert.modal.fade.modal-categories(tabindex='-1' role='dialog' aria-hidden='true' data-backdrop='static' data-keyboard='false')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body.text-center
+          .border-image
+            img(src='img/icons/alertPhone.svg' alt='')
+          h2.title.pb-4 ¡Opciones para redimir!
+          p En este momento no tenemos bonos del catálogo disponibles. Pero aún puedes redimir y acumular cupones para participar por el premio especial que quieras.  
+          .row.justify-content-center
+            .col-8.col-md-6
+              a.button.button-outline(type="button" data-dismiss="modal" aria-label="Close") Cerrar
+  include partials/menu-float
+  include partials/footer

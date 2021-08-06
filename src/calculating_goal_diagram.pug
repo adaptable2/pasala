@@ -1,0 +1,26 @@
+extends layouts/app
+
+block title
+  title Meta - Pásala Ganando / Bancolombia
+
+block content
+  include partials/header_brand
+  section.calculating-goal.diagram
+    .container 
+      .row.justify-content-center
+        .col-md-8
+          .loading-goal
+            img(src="img/assets/Grupo-comercios.svg", alt="")
+            .circle
+              p Tu meta personal es hacer compras para activar*:
+              h2 X
+              p.px-3 Grupos de comercios
+            p.text-cenetr Tú decides cuáles de estos grupos activar
+        .col-md-12.pt-5.pb-4
+          .orange-message.py-4.text-center
+            p *Para activar un grupo de comercio debes realizar compras por el monto en pesos que te asignamos en cada uno de ellos.
+            p.bold ¡Ingresa y descúbrelo!
+      .row.justify-content-center
+        .col-md-4 
+          a.button.button-outline(href='calculating_login.html') Continuar
+  include partials/footer

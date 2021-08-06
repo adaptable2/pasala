@@ -1,0 +1,97 @@
+.navigator 
+  .item
+    display: none
+.importanInfo
+  .figure.carousels
+    transform: scaleX(-1) scaleY(-1) rotate(-25deg)
+    width: 100%
+.cardBonds
+  padding: 16px 17px
+  margin: 15px 0
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+  text-align: center
+  width: 100%
+  display: flex
+  .img
+    display: flex
+    align-items: center
+    justify-content: center
+    @media screen and ( min-width: 768px )
+      min-height: 221px
+  .content-text
+    padding-left: 10px 
+  .img,.content-text
+    width: 50%
+  @media screen and ( min-width: 768px )
+    margin: 15px 0
+    min-height: 221px
+    width: auto
+    flex-wrap: wrap
+    .img,.content-text
+      width: 100%
+
+  .title
+    font-size: 1.3em
+    min-height: 40px
+  p
+    margin-bottom: 10px
+  img
+    width: 100%
+    @media screen and ( min-width: 768px )
+      margin-bottom: 10px
+  .more
+    width: 26px
+    height: 26px
+    cursor: pointer
+    display: block
+    margin: 0 auto
+    background: url(../img/icons/more.svg) no-repeat center center / contain
+.slick-dots
+  margin: 0
+  @media screen and ( min-width: 768px )
+    margin: 0 50px
+  li
+    padding: 0
+    margin: 0
+    &.slick-active
+      button
+        &::before
+          color: $lightBlue
+          opacity: 1
+          font-size: 10px
+.pecial_awards
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  .doots
+    position: relative
+  .slick-arrow
+    position: relative
+    width: 50px
+    height: 50px
+    margin: 0 10px
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    transform: translate(0)
+    &::before
+      display: none
+    &.slick-prev
+      order: 1
+      background: url(../img/icons/carousel-arrow.svg)
+    &.slick-next
+      order: 2
+      background: url(../img/icons/carousel-arrow.svg)
+      transform: rotate(180deg)
+  .slick-dots
+    position: relative
+    bottom: 0
+    display: inline-block
+    width: auto
+    order: 1
+  .slick-list.draggable
+    order: 0
+    padding-bottom: 30px 

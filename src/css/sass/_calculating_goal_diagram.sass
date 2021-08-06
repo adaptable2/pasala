@@ -1,0 +1,48 @@
+.orange-message 
+  background: $orange
+  padding-left: 15px
+  padding-right: 15px
+  ul 
+    padding: 0
+    list-style: none
+  .bold
+    font-size: 1.3em
+    margin: 0
+section.calculating-goal.diagram
+  min-height: calc( 100vh - 67px )
+  font-family: $CIBFontSans
+  padding-top: 0px
+  @media screen and ( min-width: 1366px )
+    min-height: calc( 100vh - 278px )
+  .loading-goal
+    img
+      max-width: 414px
+      width: 100%
+  .circle
+    width: 14.8em
+    height: 14.8em
+    border-radius: 100%
+    // background: silver
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    flex-direction: column
+    position: absolute
+    top: 34%
+    left: 50%
+    transform: translateY(-50%) translateX(-50%)
+    @media screen and ( min-width: 768px )
+      width: 17.8em
+      height: 17.8em
+      top: 40%
+    .icons
+      font-size: 0.88em
+    h2
+      width: 100% 
+      margin: 0
+      font-size: 3.5em
+    p
+      font-size: 1.3em
+      margin: 0
+          
